@@ -22,7 +22,7 @@ namespace COMP003A.EmployeeManagementSystem
         public string FirstName
         {
             get { return _firstName; }
-            set { if (String.IsNullOrEmpty(value))
+            set { if (String.IsNullOrWhiteSpace(value))
                     _firstName = value; }
 
         }
@@ -30,13 +30,17 @@ namespace COMP003A.EmployeeManagementSystem
         public string MiddleName
         {
             get { return _middleName; }
-            set { _middleName = value; }
+            set { 
+                if(String.IsNullOrEmpty(value))
+                    _middleName = value; }
         }
 
         public string LastName
         {
             get { return _lastName; }
-            set { _lastName = value; }
+            set {
+                if (String.IsNullOrWhiteSpace(value))
+                    _lastName = value; }
         }
 
         public double Salary

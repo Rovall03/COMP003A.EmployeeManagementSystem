@@ -1,5 +1,8 @@
 ﻿
-
+// Author: Rosa Ovalle
+// Course: COMP-003A
+// Faculty: Jonathan Cruz
+// Purpose: Employee management system demonstrating OOP principles in C#
 namespace COMP003A.EmployeeManagementSystem
 {
     internal class Employee
@@ -14,9 +17,7 @@ namespace COMP003A.EmployeeManagementSystem
 
         public string EmployeeId
         {
-            get { return _employeeId; }
-           
-          
+            get { return _employeeId; }       
         }
 
         public string FirstName
@@ -30,16 +31,20 @@ namespace COMP003A.EmployeeManagementSystem
         public string MiddleName
         {
             get { return _middleName; }
-            set { 
-                if(String.IsNullOrEmpty(value))
-                    _middleName = value; }
+            set
+            {
+                if (value == null)
+                {
+                    _middleName = string.Empty;
+                }
+            }
         }
 
         public string LastName
         {
             get { return _lastName; }
             set {
-                if (String.IsNullOrWhiteSpace(value))
+                if (String.IsNullOrEmpty(value))
                     _lastName = value; }
         }
 
@@ -47,6 +52,7 @@ namespace COMP003A.EmployeeManagementSystem
         {
             get { return _salary; }
             set { if (value < 0)
+                    throw new ArgumentException("can be less than 0");
                     _salary = value; }
         }
         /// <summary>
@@ -66,9 +72,18 @@ namespace COMP003A.EmployeeManagementSystem
             Salary = salary;
 
         }
-        public void Displayinfo()
-            {
-            Console.WriteLine($"{EmployeeId} {FirstName}{MiddleName}{LastName}{Salary}");
+        public void PrintFullName()
+        {
+            Console.WriteLine($"{FirstName}, {MiddleName},{LastName}");
+            if (string.IsNullOrEmpty(MiddleName)) Console.WriteLine($"{FirstName},{LastName}");
+        }
+        public void DisplayEmployeeInfo()
+        {
+            Console.WriteLine($"Employee ID: {EmployeeId} " );
+            Console.WriteLine($"First Name: {FirstName}");
+            Console.WriteLine($" Middle Name: {MiddleName}" );
+            Console.WriteLine($"Last Name:  {LastName}");
+            Console.WriteLine($" Salary: {Salary}");
             }
       
     }

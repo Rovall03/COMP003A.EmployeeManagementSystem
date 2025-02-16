@@ -53,6 +53,10 @@ namespace COMP003A.EmployeeManagementSystem
                 {
                     _middleName = string.Empty;
                 }
+                else
+                {
+                    _middleName = value;
+                }
             }
         }
         /// <summary>
@@ -99,8 +103,8 @@ namespace COMP003A.EmployeeManagementSystem
         public void PrintFullName()
         {
            
-            if (string.IsNullOrEmpty(MiddleName)) Console.WriteLine($"{FirstName},{LastName}");
-        else Console.WriteLine($"{FirstName}, {MiddleName},{LastName}");
+            if (string.IsNullOrEmpty(MiddleName)) Console.WriteLine($"Name: {FirstName},{LastName}");
+        else Console.WriteLine($"Name: {FirstName}, {MiddleName},{LastName}");
 
         }
         /// <summary>
@@ -108,11 +112,10 @@ namespace COMP003A.EmployeeManagementSystem
         /// </summary>
         public void DisplayEmployeeInfo()
         {
-            Console.WriteLine($"Employee ID: {EmployeeId} " );
-            Console.WriteLine($"First Name: {FirstName}");
-            Console.WriteLine($" Middle Name: {MiddleName}" );
-            Console.WriteLine($"Last Name:  {LastName}");
-            Console.WriteLine($" Salary: {Salary:C}");
+            
+            Console.WriteLine($"Employee ID: {EmployeeId} ");
+           PrintFullName();
+            Console.WriteLine($"Salary: {Salary:C}");
             }
       
     }

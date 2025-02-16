@@ -112,7 +112,7 @@ namespace COMP003A.EmployeeManagementSystem
             Console.WriteLine($"First Name: {FirstName}");
             Console.WriteLine($" Middle Name: {MiddleName}" );
             Console.WriteLine($"Last Name:  {LastName}");
-            Console.WriteLine($" Salary: {Salary}");
+            Console.WriteLine($" Salary: {Salary:C}");
             }
       
     }

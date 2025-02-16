@@ -8,23 +8,26 @@ namespace COMP003A.EmployeeManagementSystem
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Employee ID: ");
-            string employeeId = Console.ReadLine();
-            Console.WriteLine("Enter First Name: ");
-string firstName = Console.ReadLine();
 
-            Console.WriteLine("Enter Middle Name (Press Enter to skip): ");
-            string middleName = Console.ReadLine();
+            string employeeId;
+            string firstName;
+            string middleName;
+            string lastName;
+            double salary;
 
-            Console.WriteLine("Enter Last Name: ");
-string lastName = Console.ReadLine();
+            Console.Write("Enter Employee ID: ");
+             employeeId = Console.ReadLine();
+            Console.Write("Enter First Name: ");
+            firstName = Console.ReadLine();
 
-            Console.WriteLine("Enter Salary: ");
-            
-          
-            
-            
-            double salary = double.Parse(Console.ReadLine());
+            Console.Write("Enter Middle Name (Press Enter to skip): ");
+            middleName = Console.ReadLine();
+
+            Console.Write("Enter Last Name: ");
+            lastName = Console.ReadLine();
+
+            Console.Write("Enter Salary: ");
+            salary = double.Parse(Console.ReadLine());
 
 
 

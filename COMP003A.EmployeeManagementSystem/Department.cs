@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿// Author: Rosa Ovalle
+// Course: COMP-003A
+// Faculty: Jonathan Cruz
+// Purpose: Employee management system demonstrating OOP principles in C#
 namespace COMP003A.EmployeeManagementSystem
 {
     abstract class Department
@@ -12,7 +10,10 @@ namespace COMP003A.EmployeeManagementSystem
 /// gets and sets department name 
 /// </summary>
         public string DepartmentName { get; set; }
-
+        /// <summary>
+        /// detais of each dept
+        /// </summary>
+        /// <returns> string detais of each dept.GetDepartmentDetails(); </returns>
         public abstract string GetDepartmentDetails();
         /// <summary>
         /// dispalys info for department
@@ -24,59 +25,5 @@ namespace COMP003A.EmployeeManagementSystem
         }
     }
 }
-namespace COMP003A.EmployeeManagementSystem
-{
-    /// <summary>
-    /// info for dep
-    /// </summary>
-    class HRDepartment : Department, IDepartmentOperations
-    {
-       
-        public HRDepartment()
-        {
-            DepartmentName = "Human Resources";
-        }
-        public override string GetDepartmentDetails()
-        {
-            return "Handles employee relations and recruitment.";
-        }
-       
-        public void Operate()
-        {
-            Console.WriteLine("Performing HR operations...");
-        }
-    }
-}
-namespace COMP003A.EmployeeManagementSystem
-{
-    /// <summary>
-    /// info for dep
-    /// </summary>
-    class ITDepartment : Department , IDepartmentOperations
-    {
-        public ITDepartment()
-        {
 
-            DepartmentName = "IT";
-        }
-        public override string GetDepartmentDetails()
-        {
-            return "Manages technical resources and infrastructure. ";
-        }
-        
-        public void Operate()
-        {
-            Console.WriteLine("Performing IT operations...");
-        }
-    }
-}
-namespace COMP003A.EmployeeManagementSystem
-{
-    /// <summary>
-    /// what each dep. does 
-    /// </summary>
-    interface IDepartmentOperations
-    {
-        void Operate();
-    }
-}
+

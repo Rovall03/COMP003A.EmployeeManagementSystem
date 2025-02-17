@@ -1,11 +1,7 @@
-﻿
-// Author: Rosa Ovalle
+﻿// Author: Rosa Ovalle
 // Course: COMP-003A
 // Faculty: Jonathan Cruz
 // Purpose: Employee management system demonstrating OOP principles in C#
-using System.Linq.Expressions;
-using System.Xml.Linq;
-
 namespace COMP003A.EmployeeManagementSystem
 {
     /// <summary>
@@ -90,6 +86,7 @@ namespace COMP003A.EmployeeManagementSystem
 
         public Employee(string employeeId, string firstName, string middleName, string lastName, double salary)
         {
+
             _employeeId = employeeId;
             FirstName = firstName;
             MiddleName = middleName;
@@ -97,6 +94,7 @@ namespace COMP003A.EmployeeManagementSystem
             Salary = salary;
 
         }
+
       /// <summary>
       /// name of emplyee displayed 
       /// </summary>
